@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/taskFormFragment"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/background_login_register"
+    tools:context=".task.TaskFormFragment">
+
+    <EditText
+        android:id="@+id/editTextTaskName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_edit_text"
+        android:drawableStart="@drawable/name"
+        android:padding="10dp"
+        android:ems="10"
+        android:hint="@string/task_name"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:labelFor="@id/formTaskCancelButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <EditText
+        android:id="@+id/editTextTaskDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_edit_text"
+        android:drawableStart="@drawable/details"
+        android:padding="10dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/task_details"
+        android:inputType="textMultiLine"
+        android:labelFor="@id/formTaskOkButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTaskName"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <Button
+        android:id="@+id/formTaskOkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_selector"
+        android:padding="10dp"
+        android:text="@string/task_form_save_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/formTaskCancelButton"
+        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTaskDetails"
+        app:layout_constraintVertical_bias="0.225" />
+
+    <Button
+        android:id="@+id/formTaskCancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_selector"
+        android:padding="10dp"
+        android:text="@string/task_form_cancel_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTaskDetails" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
